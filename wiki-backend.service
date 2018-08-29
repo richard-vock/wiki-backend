@@ -1,0 +1,11 @@
+[Unit]
+Description=ExpressJS backend service for the wiki
+After=tinc.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /home/slim/backend/server.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
